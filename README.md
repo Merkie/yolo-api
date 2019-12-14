@@ -13,13 +13,13 @@ While making this I discovered that all YOLO messages are sent with the sender's
 **Make sure you have your phone number linked to your YOLO, can be done in the app**
 
 
-####sendVerfCode(countrycode, phonenumber)
+###sendVerfCode(countrycode, phonenumber)
 Sends the verification code needed to login to your device. Step one of logging in.
 
-####loginWithVerificationCode(verfcode)
+###loginWithVerificationCode(verfcode)
 Logs into your YOLO with the provided verification code. It's reccomended that you use an input for the verification code as you need to wait for YOLO to text you the code. You are now logged into the account.
 
-####selfInfo()
+###selfInfo()
 Returns a JSON structure of all data of your acccount:
 **Some values have been edited for security**
 ```json
@@ -58,20 +58,20 @@ Example of message JSON object:
 
 ```json
 {
-   'objectId':'object id',
-   'createdAt':'2019-11-19T02:19:42.000Z',
-   'updatedAt':'2019-11-19T02:19:42.000Z',
-   'text':'hey cutie ;)',
-   '_p_recipient':'_User$my yolo code',
-   'seen':False,
-   'replied':False,
-   'deleted':False,
-   'isBackUp':True,
-   'cookie':'cookie',
-   'wording':'Send anonymous messages',
-   'ip':'The senders IP address'',
-   '__type':'Object',
-   'className':'Message'
+   "objectId":"object id",
+   "createdAt":"2019-11-19T02:19:42.000Z",
+   "updatedAt":"2019-11-19T02:19:42.000Z",
+   "text":"hey cutie ;)",
+   "_p_recipient":"_User$my yolo code",
+   "seen":False,
+   "replied":False,
+   "deleted":False,
+   "isBackUp":True,
+   "cookie":"cookie",
+   "wording":"Send anonymous messages",
+   "ip":"The senders IP address",
+   "__type":"Object",
+   "className':'Message"
 }
 ]
 ```
