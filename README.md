@@ -2,7 +2,7 @@
 
 A Python API for interacting with the YOLO app.
 
-##Security risks
+## Security risks
 
 While making this I discovered that all YOLO messages are sent with the sender's IP address being logged. On top of that, you can veiw all of your recieved messages along with the senders' ips. This opens the floodgates for people with malitious intent to track down people's locations that respond to their YOLOs. Also, you can view anyone's phone number with only their YOLO code; this is also dangerous. I would encourage the YOLO team to fix these issues.
 
@@ -13,13 +13,13 @@ While making this I discovered that all YOLO messages are sent with the sender's
 **Make sure you have your phone number linked to your YOLO, can be done in the app**
 
 
-### sendVerfCode(countrycode, phonenumber)
+#### sendVerfCode(countrycode, phonenumber)
 Sends the verification code needed to login to your device. Step one of logging in.
 
-### loginWithVerificationCode(verfcode)
+#### loginWithVerificationCode(verfcode)
 Logs into your YOLO with the provided verification code. It's reccomended that you use an input for the verification code as you need to wait for YOLO to text you the code. You are now logged into the account.
 
-### selfInfo()
+#### selfInfo()
 Returns a JSON structure of all data of your acccount:
 **Some values have been edited for security**
 ```json
@@ -48,10 +48,10 @@ Returns a JSON structure of all data of your acccount:
 }
 ```
 
-###getSessionToken()
+#### getSessionToken()
 Returns your session token. You shouldn't need to use this.
 
-###getMessages(skip)
+#### getMessages(skip)
 Returns the last 100 messages as a list. The skip arg will tell YOLO where to start at, EX if you put 10 it will show you your last 100 messages starting at the 10th message you've recieved.
 
 Example of message JSON object:
@@ -76,8 +76,8 @@ Example of message JSON object:
 ]
 ```
 
-### getUser(user)
+#### getUser(user)
 Returns avalible data about any user. You do not need to be logged in to use this. The JSON structure is identical to selfInfo() but all the info is someone else's instead of your's.
 
-### sendMessage(user, text)
+#### sendMessage(user, text)
 Sends an anonymous message to a specific user with the text of your choice. **BEWARE: YOLO logs your IP, so you may want to edit yolo.py to add proxies if you need to.**
