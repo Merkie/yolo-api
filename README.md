@@ -13,13 +13,13 @@ While making this I discovered that all YOLO messages are sent with the sender's
 **Make sure you have your phone number linked to your YOLO, can be done in the app**
 
 
-###sendVerfCode(countrycode, phonenumber)
+### sendVerfCode(countrycode, phonenumber)
 Sends the verification code needed to login to your device. Step one of logging in.
 
-###loginWithVerificationCode(verfcode)
+### loginWithVerificationCode(verfcode)
 Logs into your YOLO with the provided verification code. It's reccomended that you use an input for the verification code as you need to wait for YOLO to text you the code. You are now logged into the account.
 
-###selfInfo()
+### selfInfo()
 Returns a JSON structure of all data of your acccount:
 **Some values have been edited for security**
 ```json
@@ -76,8 +76,8 @@ Example of message JSON object:
 ]
 ```
 
-###getUser(user)
+### getUser(user)
 Returns avalible data about any user. You do not need to be logged in to use this. The JSON structure is identical to selfInfo() but all the info is someone else's instead of your's.
 
-###sendMessage(user, text)
+### sendMessage(user, text)
 Sends an anonymous message to a specific user with the text of your choice. **BEWARE: YOLO logs your IP, so you may want to edit yolo.py to add proxies if you need to.**
